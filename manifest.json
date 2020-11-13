@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Not-a-bot",
+  "description": "This is not a bot, trust me Dreamer! , Nothing suspicious here.",
+  "version": "1.0",
+
+
+  "content_scripts": [
+   {
+     "matches": ["https://blackdragon.mobi/unit*"],
+     "run_at": "document_start",
+     "js": ["attackHandler.js"]
+   },
+      {
+     "matches": ["https://blackdragon.mobi/battles*"],
+     "run_at": "document_start",
+     "js": [ "contineHandler.js"]
+   },
+      {
+     "matches": ["https://blackdragon.mobi/maps*"],
+      "run_at": "document_start",    
+     "js": ["mapHandler.js"]
+   }
+ ],
+  "permissions": [
+   "activeTab"
+   ]
+}
