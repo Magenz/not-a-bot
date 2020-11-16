@@ -27,8 +27,12 @@
     "js":["sellMarker.js"]
       },
       {
-     "matches":["https://blackdragon.mobi/buildings/view/building=calh/action=sell/confirm*"],
+     "matches":["https://blackdragon.mobi/buildings/view/building=calh/action=sell/confirm=0*"],
     "js":["confirmSell.js"]
+      },
+      {
+           "matches":["https://blackdragon.mobi/buildings/view/building=calh/action=sell/confirm=1*"],
+    "js":["afterSell.js"]
       }
  ],
   "permissions": [

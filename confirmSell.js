@@ -1,4 +1,4 @@
-var confirm = document.querySelector('input[value*="Confir"]');
+var confirm = document.querySelector('.button');
 confirm.click();
- window.location.href = "https://blackdragon.mobi/maps/view/c=";
+ 
         
