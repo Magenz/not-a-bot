@@ -9,19 +9,27 @@
   "content_scripts": [
    {
      "matches": ["https://blackdragon.mobi/unit*"],
-     "run_at": "document_start",
+     "run_at": "document_end",
      "js": ["attackHandler.js"]
    },
       {
      "matches": ["https://blackdragon.mobi/battles*"],
-     "run_at": "document_start",
+     "run_at": "document_end",
      "js": [ "contineHandler.js"]
    },
       {
      "matches": ["https://blackdragon.mobi/maps*"],
-      "run_at": "document_start",    
+      "run_at": "document_end",    
      "js": ["mapHandler.js"]
-   }
+   },
+      {
+     "matches":["https://blackdragon.mobi/buildings/view/building=calh/action=sell/all=1*"],
+    "js":["sellMarker.js"]
+      },
+      {
+     "matches":["https://blackdragon.mobi/buildings/view/building=calh/action=sell/confirm*"],
+    "js":["confirmSell.js"]
+      }
  ],
   "permissions": [
    "activeTab"
